@@ -12,7 +12,7 @@ sys.path.insert(1,pickpath)
 print(sys.path)
 
 from pickutils import Picks
-printpicks = Picks([1,1,1],[1,1,1],[1,1,1], "pst", "product",1,
+printpicks = Picks([[0,0]],[],[], "pst", "product",1,
 "label",
 "filepath") #setting the last one as None returns a typeError.
 print(printpicks)
