@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import sys
+from array import *
+import numpy as np
 
 pickpath='./syst_linux_py/radutils'
 #print(sys.path)
@@ -12,11 +14,13 @@ sys.path.insert(1,pickpath)
 print(sys.path)
 
 from pickutils import Picks
-printpicks = Picks([[0,0]],[],[], "pst", "product",1,
-"label",
-"filepath") #setting the last one as None returns a typeError.
-print(printpicks)
 
+np_array1 = np.array([[2, 3],[2,4]])
+
+printpicks = Picks(np_array1, [],[], "pst",
+"product",1,
+"label", "filepath") #setting the last one as None returns a typeError.
+print(printpicks)
 try:
     printpicks.load()
 except TypeError as e:
