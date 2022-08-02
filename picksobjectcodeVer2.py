@@ -47,11 +47,11 @@ print(get_sweeps)
 #7
 calc_missing_vmax = picks.calc_missing_vmax()
 print(calc_missing_vmax)
-print("OKAY7")
+
 
 #8
 picks.autopick()
-print("OKAY8")
+
 
 #9
 display_name = picks.display_name()
