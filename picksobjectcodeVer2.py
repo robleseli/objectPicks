@@ -44,14 +44,13 @@ picks.delete_picks(1,1,1)
 #6
 get_sweeps = picks.get_sweeps()
 print(get_sweeps)
+
 #7
 calc_missing_vmax = picks.calc_missing_vmax()
 print(calc_missing_vmax)
 
-
 #8
 picks.autopick()
-
 
 #9
 display_name = picks.display_name()
