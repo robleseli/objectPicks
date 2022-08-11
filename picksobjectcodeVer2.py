@@ -18,10 +18,12 @@ from pickutils import Picks
 np_array1 = np.array([[]])
 np_array2 = np.array([[]])
 np_array3 = np.array([[]])
+nameofpickfile = input("enter the name of the pick file you want to use: ") #valid example: IRE/CCx/X01a
+pickfilepath = input("enter the path of the pick file you want to use: ") #valid example: /disk/kea/WAIS/orig/xtra/RTZ2/PIK/rpe1/IRE/CCx/X01a/bed
 
-picks = Picks(np_array1, np_array2, np_array3, "IRE/CCx/X01a",
+picks = Picks(np_array1, np_array2, np_array3, nameofpickfile,
 "der",1,
-"bed", "/disk/kea/WAIS/orig/xtra/RTZ2/PIK/rpe1/IRE/CCx/X01a/bed")
+"bed", pickfilepath)
 print(picks)
 #print(picks.get_sweeps());  # Errors out because there is no data.
 picks.load()
@@ -43,22 +45,20 @@ picks.close_pick(1,1)
 picks.delete_picks(1,1,1)
 
 #6
-get_sweeps = picks.get_sweeps()
-print(get_sweeps)
+picks.get_sweeps()
+
 
 #7
-calc_missing_vmax = picks.calc_missing_vmax()
-print(calc_missing_vmax)
-print("OKAY7")
+picks.calc_missing_vmax()
 
 #8
 picks.autopick()
-print("OKAY8")
+
 
 #9
-display_name = picks.display_name()
-print(display_name)
+picks.display_name()
+
 
 #10
-is_complete = picks.is_complete()
-print(is_complete)
+picks.is_complete()
+
