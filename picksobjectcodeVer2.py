@@ -19,9 +19,9 @@ np_array1 = np.array([[]])
 np_array2 = np.array([[]])
 np_array3 = np.array([[]])
 
-picks = Picks(np_array1, np_array2, np_array3, "IRE/CCx/X01a",
+picks = Picks(np_array1, np_array2, np_array3, "ASB/JKB1a/R05Ea",
 "der",1,
-"bed", "IRE-CCx-X01a.bed")
+"bed", "ASB-JKB1a-R05ea.bed")
 print(picks)
 #print(picks.get_sweeps());  # Errors out because there is no data.
 picks.load()
