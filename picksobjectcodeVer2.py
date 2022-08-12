@@ -15,9 +15,9 @@ print(sys.path)
 
 from pickutils import Picks
 
-np_array1 = np.array([[]])
-np_array2 = np.array([[]])
-np_array3 = np.array([[]])
+np_array1 = np.array([[0,0]])
+np_array2 = np.array([[0,0]])
+np_array3 = np.array([[0,0]])
 
 picks = Picks(np_array1, np_array2, np_array3, "ASB/JKB1a/R05Ea",
 "pik1",1,
